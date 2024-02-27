@@ -1,0 +1,8 @@
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        opaque-token:
+          introspection-uri: https://www.googleapis.com
+          client-id: ${GITHUB_CLIENT}
+          client-secret: ${GITHUB_SECRET}
