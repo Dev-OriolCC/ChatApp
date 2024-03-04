@@ -2,15 +2,12 @@ package com.chat.app.chatapp.dto;
 
 import lombok.*;
 
-import java.util.Map;
-
-
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class MessageDto {
+public class UserDto {
 
     String id;
     String username;
@@ -19,7 +16,6 @@ public class MessageDto {
     String picture;
     Boolean email_verified;
 
-    public MessageDto(String message) {
-        this.message = message;
-    }
+
+
 }

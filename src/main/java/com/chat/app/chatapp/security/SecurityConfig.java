@@ -33,20 +33,10 @@ public class SecurityConfig {
             .sessionManagement(c -> c.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
             .authorizeHttpRequests(authorize ->
                     authorize
-                            .requestMatchers("/","/auth/**","/public").permitAll()
+                            .requestMatchers("/","/auth/**","/public", "/public/messages").permitAll()
                             .anyRequest().authenticated()
             )
             .oauth2ResourceServer(c -> c.opaqueToken(Customizer.withDefaults()));
-//        http
-//            .csrf()
-//            .disable()
-//            .authorizeHttpRequests()
-//            .anyRequest()
-//            .authenticated()
-//            .and()
-//            .oauth2Login()
-//        ;
-
         return http.build();
     }
     @Bean

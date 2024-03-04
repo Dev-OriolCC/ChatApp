@@ -8,8 +8,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class PublicController {
 
-    @GetMapping("/public")
+    @GetMapping("/public/messages")
     public ResponseEntity<MessageDto> home() {
-        return ResponseEntity.ok(new MessageDto("public content"));
+        MessageDto messageDto = MessageDto.builder().message("Public Content").build();
+        return ResponseEntity.ok(messageDto);
     }
 }
