@@ -1,6 +1,6 @@
-package com.chat.app.chatapp.config;
+package com.chat.app.chatapp.web.config;
 
-import com.chat.app.chatapp.dto.UserInfo;
+import com.chat.app.chatapp.web.dto.UserInfo;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.oauth2.core.OAuth2AuthenticatedPrincipal;
 import org.springframework.security.oauth2.server.resource.introspection.OAuth2IntrospectionAuthenticatedPrincipal;

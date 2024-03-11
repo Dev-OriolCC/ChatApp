@@ -6,3 +6,14 @@ spring:
           introspection-uri: https://www.googleapis.com
           client-id: ${GITHUB_CLIENT}
           client-secret: ${GITHUB_SECRET}
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/spring_chatapp
+    username: root
+    password:
+    driver-class-name: com.mysql.cj.jdbc.Driver

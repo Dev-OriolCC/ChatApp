@@ -1,6 +1,7 @@
-package com.chat.app.chatapp.controller;
+package com.chat.app.chatapp.web.controller;
 
-import com.chat.app.chatapp.dto.UserDto;
+import com.chat.app.chatapp.web.dto.MessageDto;
+import com.chat.app.chatapp.web.dto.UserDto;
 import com.chat.app.chatapp.service.UserService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
@@ -22,10 +23,13 @@ public class PrivateController {
     public ResponseEntity<UserDto> home(
             @AuthenticationPrincipal(expression = "name") String username,
             @AuthenticationPrincipal(expression = "attributes") Map<String, Object> attributes) {
-
-        //System.out.println("MesageDTO: "+messageDto.toString());
-
         return ResponseEntity.ok(userService.authenticatedUser(attributes));
+    }
+
+    @GetMapping("/test")
+    public ResponseEntity<MessageDto> message() {
+        MessageDto messageDto = MessageDto.builder().id("123").build();
+        return ResponseEntity.ok(messageDto);
     }
 
 }

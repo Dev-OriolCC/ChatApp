@@ -1,13 +1,24 @@
 package com.chat.app.chatapp.service;
 
-import com.chat.app.chatapp.dto.MessageDto;
-import com.chat.app.chatapp.dto.UserDto;
+import com.chat.app.chatapp.data.entities.UserEntity;
+import com.chat.app.chatapp.data.repositories.UserRepository;
+import com.chat.app.chatapp.web.dto.UserDto;
 import org.springframework.stereotype.Service;
 
 import java.util.Map;
 
 @Service
 public class UserService {
+
+    final UserRepository userRepository;
+
+    public UserService(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
+
+    public UserDto save(UserDto userDto) {
+        UserEntity user = userRepository.save(userDto);
+    }
 
     public UserDto authenticatedUser(Map<String, Object> attributes) {
         UserDto userDto = UserDto.builder()

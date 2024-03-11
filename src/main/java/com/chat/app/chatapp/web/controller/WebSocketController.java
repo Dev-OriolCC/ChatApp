@@ -1,8 +1,8 @@
-package com.chat.app.chatapp.controller;
+package com.chat.app.chatapp.web.controller;
 
 
-import com.chat.app.chatapp.dto.ChatMessageDto;
-import com.chat.app.chatapp.dto.MessageType;
+import com.chat.app.chatapp.web.dto.ChatMessageDto;
+import com.chat.app.chatapp.web.dto.MessageType;
 import org.springframework.messaging.handler.annotation.DestinationVariable;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.SendTo;

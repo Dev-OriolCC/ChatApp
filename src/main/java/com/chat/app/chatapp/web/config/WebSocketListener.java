@@ -1,8 +1,8 @@
-package com.chat.app.chatapp.config;
+package com.chat.app.chatapp.web.config;
 
 
-import com.chat.app.chatapp.dto.ChatMessageDto;
-import com.chat.app.chatapp.dto.MessageType;
+import com.chat.app.chatapp.web.dto.ChatMessageDto;
+import com.chat.app.chatapp.web.dto.MessageType;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;

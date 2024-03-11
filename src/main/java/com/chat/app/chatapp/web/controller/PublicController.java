@@ -1,6 +1,6 @@
-package com.chat.app.chatapp.controller;
+package com.chat.app.chatapp.web.controller;
 
-import com.chat.app.chatapp.dto.MessageDto;
+import com.chat.app.chatapp.web.dto.MessageDto;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

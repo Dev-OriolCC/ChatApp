@@ -1,4 +1,4 @@
-package com.chat.app.chatapp.dto;
+package com.chat.app.chatapp.web.dto;
 
 public record TokenDto (String token){
 }
